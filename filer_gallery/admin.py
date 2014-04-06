@@ -38,7 +38,7 @@ class GalleryAdmin(admin.ModelAdmin):
         return form
         
     def get_urls(self):
-        from django.conf.urls.defaults import patterns, url
+        from django.conf.urls import patterns, url
         urls = super(GalleryAdmin, self).get_urls()
         url_patterns = patterns('',
             url(r'upload/$',self.ajax_upload,
